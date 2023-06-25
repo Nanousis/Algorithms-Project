@@ -8,27 +8,38 @@ memory: current progress = 4000 / 6928
 memory: current progress = 5000 / 6928
 memory: current progress = 6000 / 6928
 The betweenness array is (bigger is better):
-  1.)Node 6927 is in 2817762
-  2.)Node 186 is in 1427513
-  3.)Node  10 is in 1060344
-  4.)Node  86 is in 723781
-  5.)Node 417 is in 704770
-  6.)Node 211 is in 469125
-  7.)Node   2 is in 468971
-  8.)Node 249 is in 452806
-  9.)Node 333 is in 449877
- 10.)Node 164 is in 419365
+  1.)Node 6927 is in 32649134
+  2.)Node 186 is in 3157434
+  3.)Node  10 is in 2982098
+  4.)Node  86 is in 1487364
+  5.)Node 417 is in 1401312
+  6.)Node 164 is in 1392230
+  7.)Node  44 is in 1278582
+  8.)Node  78 is in 1168702
+  9.)Node 333 is in 1051952
+ 10.)Node 249 is in 1011862
 The closeness array is (total distance)(smaller is better):
-  1.)Node 164 is in 18547
-  2.)Node  10 is in 18570
-  3.)Node 186 is in 18789
-  4.)Node 374 is in 18840
-  5.)Node 436 is in 18940
-  6.)Node  78 is in 18940
-  7.)Node  44 is in 18948
-  8.)Node 475 is in 19012
-  9.)Node 147 is in 19035
- 10.)Node 323 is in 19157
+  1.)Node 6927 is in 13345
+  2.)Node 164 is in 18547
+  3.)Node  10 is in 18570
+  4.)Node 186 is in 18789
+  5.)Node 374 is in 18840
+  6.)Node 436 is in 18940
+  7.)Node  78 is in 18940
+  8.)Node  44 is in 18948
+  9.)Node 475 is in 19012
+ 10.)Node 147 is in 19035
 Total number of vertices: 6927
-Kendal coefficient is: 0.362
-Time taken is 16.45 minutes / 987.199260 seconds
+Ranking of vector 1 in S.P. 207, of Distance 184
+Ranking of vector 2 in S.P. 12, of Distance 146
+Ranking of vector 3 in S.P. 379, of Distance 252
+Ranking of vector 4 in S.P. 77, of Distance 65
+Ranking of vector 5 in S.P. 181, of Distance 117
+Ranking of vector 6 in S.P. 104, of Distance 62
+Ranking of vector 7 in S.P. 408, of Distance 298
+Ranking of vector 8 in S.P. 144, of Distance 87
+Ranking of vector 9 in S.P. 344, of Distance 225
+
+Kendall coefficient is: 0.399
+
+Time taken is 16.70 minutes / 1002.218258 seconds

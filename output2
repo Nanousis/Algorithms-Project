@@ -6,27 +6,38 @@ memory: current progress = 2000 / 4942
 memory: current progress = 3000 / 4942
 memory: current progress = 4000 / 4942
 The betweenness array is (bigger is better):
-  1.)Node 602 is in 70832
-  2.)Node 932 is in 57294
-  3.)Node 3411 is in 54447
-  4.)Node 2287 is in 53884
-  5.)Node 3930 is in 53830
-  6.)Node 1210 is in 52026
-  7.)Node 4452 is in 48719
-  8.)Node 2926 is in 47271
-  9.)Node 2865 is in 45221
- 10.)Node 1057 is in 44994
+  1.)Node 651 is in 6920928
+  2.)Node 559 is in 6803696
+  3.)Node 1365 is in 6786260
+  4.)Node 2824 is in 6717278
+  5.)Node 1324 is in 6642510
+  6.)Node 2685 is in 6497662
+  7.)Node 433 is in 5113348
+  8.)Node 1377 is in 5059912
+  9.)Node 1213 is in 5002920
+ 10.)Node 1380 is in 4897320
 The closeness array is (total distance)(smaller is better):
-  1.)Node 1678 is in 61030
-  2.)Node 2944 is in 61475
-  3.)Node 1377 is in 61849
-  4.)Node 2781 is in 62040
-  5.)Node 1365 is in 62274
-  6.)Node 1368 is in 62385
-  7.)Node 1380 is in 62441
-  8.)Node 2685 is in 62712
-  9.)Node 2795 is in 63308
- 10.)Node 2782 is in 63311
+  1.)Node 1378 is in 60374
+  2.)Node 1678 is in 61030
+  3.)Node 2944 is in 61475
+  4.)Node 1377 is in 61849
+  5.)Node 2781 is in 62040
+  6.)Node 1365 is in 62274
+  7.)Node 1368 is in 62385
+  8.)Node 1380 is in 62441
+  9.)Node 2685 is in 62712
+ 10.)Node 2795 is in 63308
 Total number of vertices: 4941
-Kendal coefficient is: 0.156
-Time taken is 03.33 minutes / 199.834324 seconds
+Ranking of vector 1 in S.P. 817, of Distance 214
+Ranking of vector 2 in S.P. 1172, of Distance 390
+Ranking of vector 3 in S.P. 104, of Distance 75
+Ranking of vector 4 in S.P. 1249, of Distance 571
+Ranking of vector 5 in S.P. 576, of Distance 3585
+Ranking of vector 6 in S.P. 907, of Distance 3834
+Ranking of vector 7 in S.P. 522, of Distance 3222
+Ranking of vector 8 in S.P. 2464, of Distance 3222
+Ranking of vector 9 in S.P. 1239, of Distance 3833
+
+Kendall coefficient is: 0.202
+
+Time taken is 3.38 minutes / 203.096087 seconds

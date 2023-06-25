@@ -7,7 +7,9 @@
 int main(int argc, char *argv[]) {
 
     clock_t start, end;
-    double execution_time;
+    double execution_time, minutes;
+    NodeRanking *in_rankingsPtr;
+    
     start = clock();
     if (argc != 2) {
         printf("You should run this ./%s filename", argv[0]);
@@ -41,53 +43,33 @@ int main(int argc, char *argv[]) {
     //untill you reach your destination
     floyDistance = FloydWarshall(vertices,numberOfVertices,&Next);
     if (!floyDistance||!Next) return -1;
-    printDistanceMatrix(Next,numberOfVertices);
+    //printDistanceMatrix(Next,numberOfVertices);
     //sorts the next based on how many times a node is included in all shortest paths
     NodeCount *betweennessSorted=GetSortedBetweennessCentrality(Next,numberOfVertices,true);
     //sorts the floyDistance based on the distance to all nodes
     NodeCount *closenessSorted=GetSortedClosenessCentrality(floyDistance,numberOfVertices,true);
     
-
-   
-
     printf("The betweenness array is (bigger is better):\n");
-    PrintNodeSorted(betweennessSorted, 0, numberOfVertices-1,40);
+    PrintNodeSorted(betweennessSorted, 0, numberOfVertices-1,10);
 
     printf("The closeness array is (total distance)(smaller is better):\n");
-    PrintNodeSorted(closenessSorted, 0, numberOfVertices,40);
+    PrintNodeSorted(closenessSorted, 0, numberOfVertices-1,10);
 
     printf("Total number of vertices: %d\n",numberOfVertices-1);
 
-
-    NodeRanking *result=GetRankingsOfAll(betweennessSorted,closenessSorted,numberOfVertices);
-     for(int i=1;i<numberOfVertices;i++){
-        printf("Ranking of vector %d in S.P. %d, of Distance %d\n",i ,result[i].placeInA,result[i].placeInB);
+    in_rankingsPtr = GetRankingsOfAll(betweennessSorted, closenessSorted, numberOfVertices);
+    for(int i=1;i<10;i++){
+        printf("Ranking of vector %d in S.P. %d, of Distance %d\n",i ,in_rankingsPtr->rankA[i],in_rankingsPtr->rankB[i]);
     }
-    /*With the closeness being sorted in ascending order, we only need to compare the rankings of betweeness.
-    Each pair of betweenes and closeness rank refers to the same node*/
-   int numOfCenters=1;
-    // while(numOfCenters<=0){
-    //     printf("How many centers do you want?:");
-    //     scanf(" %d",&numOfCenters);
-    // }
-    int* rankPtr = (int*) malloc( (numberOfVertices-numOfCenters)*sizeof(int) );
-   
-    if ( rankPtr == NULL ) {
-        printf("Not enough memory to allocate for array creation. Aborting calculating kendal\n");
-    }
-    else {
-        for( int vertice=numOfCenters; vertice<numberOfVertices; vertice++ ){
-            rankPtr[vertice-numOfCenters] = GetIdOfRanking(betweennessSorted,numberOfVertices,closenessSorted[vertice].index);
-        }
-        printf("Kendal coefficient is: %.3lf\n", kendal( rankPtr, (numberOfVertices - numOfCenters) ));
-    }
+    printf("\nKendall coefficient is: %.3lf\n", kendal(in_rankingsPtr, numberOfVertices));
     end = clock();
-    double minutes;
+
     execution_time = ((double)(end - start))/CLOCKS_PER_SEC;
     minutes=execution_time/60;
-    printf("Time taken is %02.2lf minutes / %02lf seconds",minutes,execution_time);
-    free(rankPtr);
+    printf("\nTime taken is %02.2lf minutes / %02lf seconds",minutes,execution_time);
+
     FreeVertices(vertices,numberOfVertices);
+    free_rankings(in_rankingsPtr);
     free(Next);
     free(floyDistance);
     free(betweennessSorted);
