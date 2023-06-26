@@ -1,6 +1,8 @@
 {
     "files.associations": {
         "*.embeddedhtml": "html",
-        "__locale": "c"
+        "__locale": "c",
+        "functions.h": "c",
+        "string.h": "c"
     }
 }

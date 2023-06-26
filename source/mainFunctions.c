@@ -1,4 +1,17 @@
+// Panagiotis Nanousis 2023
+// Giannis Giannoulas
+// Orestis Panopoulos
+
 #include "functions.h"
+
+/*
+    On this file we have the main algorithms
+    and the main functions used by the program
+    as well as the different kinds of freeing.
+*/
+
+
+
 
 /*
 A function that reads a network file and 

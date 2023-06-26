@@ -1,9 +1,21 @@
+// Panagiotis Nanousis 2023
+// Giannis Giannoulas
+// Orestis Panopoulos
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
 #include "functions.h"
 # include<time.h>
+
+
+/*
+    This is the main file that runs the program
+    and handles all the function clalling,
+    file I/O and memories.
+*/
+
 int main(int argc, char *argv[]) {
 
     clock_t start, end;
@@ -43,24 +55,35 @@ int main(int argc, char *argv[]) {
     //untill you reach your destination
     floyDistance = FloydWarshall(vertices,numberOfVertices,&Next);
     if (!floyDistance||!Next) return -1;
-    //printDistanceMatrix(Next,numberOfVertices);
+  //  printDistanceMatrix(floyDistance,numberOfVertices);
+   // printDistanceMatrix(Next,numberOfVertices);
+
     //sorts the next based on how many times a node is included in all shortest paths
     NodeCount *betweennessSorted=GetSortedBetweennessCentrality(Next,numberOfVertices,true);
     //sorts the floyDistance based on the distance to all nodes
     NodeCount *closenessSorted=GetSortedClosenessCentrality(floyDistance,numberOfVertices,true);
     
     printf("The betweenness array is (bigger is better):\n");
-    PrintNodeSorted(betweennessSorted, 0, numberOfVertices-1,10);
+    PrintNodeSorted(betweennessSorted, 0, numberOfVertices-1,40);
 
     printf("The closeness array is (total distance)(smaller is better):\n");
-    PrintNodeSorted(closenessSorted, 0, numberOfVertices-1,10);
+    PrintNodeSorted(closenessSorted, 0, numberOfVertices-1,40);
 
     printf("Total number of vertices: %d\n",numberOfVertices-1);
 
     in_rankingsPtr = GetRankingsOfAll(betweennessSorted, closenessSorted, numberOfVertices);
-    for(int i=1;i<10;i++){
-        printf("Ranking of vector %d in S.P. %d, of Distance %d\n",i ,in_rankingsPtr->rankA[i],in_rankingsPtr->rankB[i]);
+    printf("[");
+    for(int i=1;i<numberOfVertices;i++){
+        //printf("Ranking of vector %d in S.P. %d, of Distance %d\n",i ,in_rankingsPtr->rankA[i],in_rankingsPtr->rankB[i]);
+        printf("%d,",in_rankingsPtr->rankA[i]);
     }
+    printf("]");
+        printf("\n[");
+        for(int i=1;i<numberOfVertices;i++){
+        //printf("Ranking of vector %d in S.P. %d, of Distance %d\n",i ,in_rankingsPtr->rankA[i],in_rankingsPtr->rankB[i]);
+        printf("%d,",in_rankingsPtr->rankB[i]);
+    }
+    printf("]");
     printf("\nKendall coefficient is: %.3lf\n", kendal(in_rankingsPtr, numberOfVertices));
     end = clock();
 

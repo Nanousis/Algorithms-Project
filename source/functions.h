@@ -1,3 +1,8 @@
+// Panagiotis Nanousis 2023
+// Giannis Giannoulas
+// Orestis Panopoulos
+
+
 #ifndef FUNCTIONS
 #define FUNCTIONS
 #include <stdio.h>
