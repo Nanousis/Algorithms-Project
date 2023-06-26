@@ -9,15 +9,15 @@ memory: current progress = 5000 / 6928
 memory: current progress = 6000 / 6928
 The betweenness array is (bigger is better):
   1.)Node 6927 is in 32649134
-  2.)Node 186 is in 3157434
-  3.)Node  10 is in 2982098
-  4.)Node  86 is in 1487364
-  5.)Node 417 is in 1401312
-  6.)Node 164 is in 1392230
-  7.)Node  44 is in 1278582
-  8.)Node  78 is in 1168702
-  9.)Node 333 is in 1051952
- 10.)Node 249 is in 1011862
+  2.)Node  186 is in 3157434
+  3.)Node   10 is in 2982098
+  4.)Node   86 is in 1487364
+  5.)Node  417 is in 1401312
+  6.)Node  164 is in 1392230
+  7.)Node   44 is in 1278582
+  8.)Node   78 is in 1168702
+  9.)Node  333 is in 1051952
+ 10.)Node  249 is in 1011862
 The closeness array is (total distance)(smaller is better):
   1.)Node 6927 is in 13345
   2.)Node 164 is in 18547

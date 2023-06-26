@@ -12,30 +12,6 @@ The betweenness array is (bigger is better):
   8.)Node   9 is in  44
   9.)Node  24 is in  30
  10.)Node   2 is in  30
- 11.)Node  30 is in  12
- 12.)Node  14 is in   8
- 13.)Node  26 is in   6
- 14.)Node  25 is in   2
- 15.)Node   7 is in   2
- 16.)Node  22 is in   0
- 17.)Node  23 is in   0
- 18.)Node  27 is in   0
- 19.)Node  29 is in   0
- 20.)Node  31 is in   0
- 21.)Node  17 is in   0
- 22.)Node   4 is in   0
- 23.)Node   5 is in   0
- 24.)Node   8 is in   0
- 25.)Node  10 is in   0
- 26.)Node  11 is in   0
- 27.)Node  12 is in   0
- 28.)Node  13 is in   0
- 29.)Node  15 is in   0
- 30.)Node  16 is in   0
- 31.)Node   0 is in   0
- 32.)Node  18 is in   0
- 33.)Node  19 is in   0
- 34.)Node  20 is in   0
 The closeness array is (total distance)(smaller is better):
   1.)Node   1 is in  58
   2.)Node   3 is in  59
@@ -47,33 +23,17 @@ The closeness array is (total distance)(smaller is better):
   8.)Node  20 is in  67
   9.)Node   2 is in  68
  10.)Node   4 is in  71
- 11.)Node  31 is in  72
- 12.)Node  28 is in  73
- 13.)Node  29 is in  74
- 14.)Node   8 is in  75
- 15.)Node  10 is in  77
- 16.)Node  24 is in  84
- 17.)Node  30 is in  86
- 18.)Node   6 is in  86
- 19.)Node   7 is in  86
- 20.)Node   5 is in  87
- 21.)Node  11 is in  87
- 22.)Node  26 is in  88
- 23.)Node  22 is in  88
- 24.)Node  18 is in  88
- 25.)Node  25 is in  88
- 26.)Node  15 is in  89
- 27.)Node  16 is in  89
- 28.)Node  21 is in  89
- 29.)Node  19 is in  89
- 30.)Node  13 is in  89
- 31.)Node  12 is in  90
- 32.)Node  27 is in  92
- 33.)Node  23 is in  96
- 34.)Node  17 is in 116
 Total number of vertices: 34
-[1,9,2,14,14,6,13,14,8,14,14,14,14,11,14,14,14,14,14,14,14,14,14,9,13,12,14,7,14,10,14,5,3,4]
-[1,7,2,8,16,15,15,12,4,13,16,19,18,5,18,18,22,17,18,6,18,17,21,14,17,17,20,10,11,15,9,3,4,3]
+Ranking of vector 1 in S.P. 1, of Distance 1
+Ranking of vector 2 in S.P. 9, of Distance 7
+Ranking of vector 3 in S.P. 2, of Distance 2
+Ranking of vector 4 in S.P. 14, of Distance 8
+Ranking of vector 5 in S.P. 14, of Distance 16
+Ranking of vector 6 in S.P. 6, of Distance 15
+Ranking of vector 7 in S.P. 13, of Distance 15
+Ranking of vector 8 in S.P. 14, of Distance 12
+Ranking of vector 9 in S.P. 8, of Distance 4
+]
 Kendall coefficient is: 0.573
 
-Time taken is 0.00 minutes / 0.000541 seconds
+Time taken is 0.00 minutes / 0.000240 seconds

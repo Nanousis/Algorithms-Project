@@ -3,6 +3,8 @@
         "*.embeddedhtml": "html",
         "__locale": "c",
         "functions.h": "c",
-        "string.h": "c"
+        "string.h": "c",
+        "chrono": "c",
+        "unordered_map": "c"
     }
 }

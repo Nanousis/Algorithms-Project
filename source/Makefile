@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -g
+CFLAGS = -Wall -g -lm
 DEPS = functions.h
 OBJ = main.o printFunctions.o mainFunctions.o
 BIN = main

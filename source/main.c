@@ -64,26 +64,20 @@ int main(int argc, char *argv[]) {
     NodeCount *closenessSorted=GetSortedClosenessCentrality(floyDistance,numberOfVertices,true);
     
     printf("The betweenness array is (bigger is better):\n");
-    PrintNodeSorted(betweennessSorted, 0, numberOfVertices-1,40);
+    PrintNodeSorted(betweennessSorted, 0, numberOfVertices-1,10);
 
     printf("The closeness array is (total distance)(smaller is better):\n");
-    PrintNodeSorted(closenessSorted, 0, numberOfVertices-1,40);
+    PrintNodeSorted(closenessSorted, 0, numberOfVertices-1,10);
 
     printf("Total number of vertices: %d\n",numberOfVertices-1);
 
     in_rankingsPtr = GetRankingsOfAll(betweennessSorted, closenessSorted, numberOfVertices);
-    printf("[");
-    for(int i=1;i<numberOfVertices;i++){
-        //printf("Ranking of vector %d in S.P. %d, of Distance %d\n",i ,in_rankingsPtr->rankA[i],in_rankingsPtr->rankB[i]);
-        printf("%d,",in_rankingsPtr->rankA[i]);
+
+    for(int i=1;i<10;i++){
+        printf("Ranking of vector %d in S.P. %d, of Distance %d\n",i ,in_rankingsPtr->rankA[i],in_rankingsPtr->rankB[i]);
+        //printf("%d,",in_rankingsPtr->rankA[i]);
     }
-    printf("]");
-        printf("\n[");
-        for(int i=1;i<numberOfVertices;i++){
-        //printf("Ranking of vector %d in S.P. %d, of Distance %d\n",i ,in_rankingsPtr->rankA[i],in_rankingsPtr->rankB[i]);
-        printf("%d,",in_rankingsPtr->rankB[i]);
-    }
-    printf("]");
+
     printf("\nKendall coefficient is: %.3lf\n", kendal(in_rankingsPtr, numberOfVertices));
     end = clock();
 
